@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Live Streaming Demonstration</title>
+      <style>
+        .centered {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+	}
+      </style>
+   
+</head>
+<body bgcolor="#5E5A80">
+  <center><h1>Final Project</h1></center>
+  <table class="centered" width="100%">              
+    <td valign="bottom" align="center">
+      <img src="{{ url_for('video_feed') }}" alt="Live Stream" width="500" height="450" border=0 />
+    </td> 
+    <td valign="bottom" align="center">
+      <video width="500" height="450" controls>
+        <source src={{ url_for('static', filename="demo.mp4") }} type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </td>
+  </table>
+</body>
